@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Excercise 1
+class CustomInteger{
+    let val: Int
+    
+    init (val: Int){
+        self.val = val
+    }
+}
+    extension CustomInteger: Equatable {
+
+    static func == (cI1: CustomInteger, cI2: CustomInteger) -&gt; Bool {
+        return cI1.val == cI2.val
+    }
+    static func +(cI1: CustomInteger, cI2: CustomInteger) -&gt; Int{
+        return cI1.val + cI2.val
+    }
+    static func -(cI1: CustomInteger, cI2: CustomInteger) -&gt; Int{
+        return cI1.val - cI2.val
+    }
+    
+}
+extension CustomInteger: CustomStringConvertible{
+    var description: String{
+        return "(\(val))"
+    }
+
+}
+// Task 1.1
+let customer1 = CustomInteger(val: 2)
+let customer2 = CustomInteger(val: 2)
+print(customer1 == customer2)
+
+// Task 1.2
+
+let customer3 = CustomInteger(val: 2)
+let customer4 = CustomInteger(val: 2)
+print(customer3 + customer4)
+
+let customer5 = CustomInteger(val: 2)
+let customer6 = CustomInteger(val: 2)
+print(customer5 - customer6)
+
+// Task 1.3
+
+let customer7 = CustomInteger(val: 6)
+print(customer7)
+
+
+// Excercise 2
+
+var code = [ "a" : "b", "b" : "c", "c" : "d", "d" : "e",
+             "e" : "f", "f" : "g", "g" : "h", "h" : "i", "i" : "j", "j" : "k", "k" : "l", "l" : "m", "m" : "n", "n" : "o", "o" : "p", "p" : "q", "q" : "r", "r" : "s", "s" : "t", "t" : "u", "u" : "v", "v" : "w", "w" : "x", "x" : "y", "y" : "z", "z" : "a"]
+
+let toEncrypt: String
+var encrypt = ""
+toEncrypt = "ktjzr"
+for sNum in toEncrypt{
+    for cNum in code{
+        if sNum.lowercased() == cNum.key{
+            encrypt.append(cNum.value)
+        }
+    }
+}
+print(encrypt)
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 1554}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
